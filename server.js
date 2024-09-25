@@ -1,8 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
-const dbConn = require('../config/db')
+const dbConn = require('./config/db')
 
-require('dotenv').config()
 
 
 // const dotenv =require('dotenv')
@@ -10,7 +10,7 @@ require('dotenv').config()
 
 const port = process.env.PORT || 3334
 
-// app.use(express.json())
+app.use(express.json())
 
 app.get('/',(req,res)=>{
     res.json({message:"welcome"})
